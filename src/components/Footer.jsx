@@ -22,6 +22,7 @@ function Footer() {
             <a
               href="https://www.youtube.com/"
               target="_blank"
+              rel="noreferrer"
               className="footer-social-item"
             >
               <FontAwesomeIcon icon={faYoutube} />
@@ -29,6 +30,7 @@ function Footer() {
             <a
               href="https://ru-ru.facebook.com/"
               target="_blank"
+              rel="noreferrer"
               className="footer-social-item"
             >
               <FontAwesomeIcon icon={faFacebook} />
@@ -36,6 +38,7 @@ function Footer() {
             <a
               href="https://twitter.com/?lang=ru"
               target="_blank"
+              rel="noreferrer"
               className="footer-social-item"
             >
               <FontAwesomeIcon icon={faTwitter} />
