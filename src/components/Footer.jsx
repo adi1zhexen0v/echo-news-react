@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   faFacebook,
   faTwitter,
@@ -12,9 +13,15 @@ function Footer() {
         <div className="footer-part">
           <h2 className="footer-logo">EchoNews</h2>
           <ul className="footer-link-list">
-            <li className="footer-link-item">Главная</li>
-            <li className="footer-link-item">Новости</li>
-            <li className="footer-link-item">Контакты</li>
+            <Link to="/" className="footer-link-item">
+              Главная
+            </Link>
+            <Link to="/news" className="footer-link-item">
+              Новости
+            </Link>
+            <Link to="/contact" className="footer-link-item">
+              Контакты
+            </Link>
           </ul>
         </div>
         <div className="footer-part">

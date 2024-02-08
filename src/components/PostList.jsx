@@ -8,18 +8,9 @@ function PostList() {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
+  console.log(posts);
+
   useEffect(() => {
-    // setIsLoading(true);
-    // fetch("https://alphaedu.portfolio-adilzhexenov.kz/news")
-    //   .then((res) => res.json())
-    //   .then((data) => setPosts(data))
-    //   .catch((err) => setIsError(true))
-    //   .finally(() => {
-    //     setIsLoading(false);
-    //   });
-
-    // State Manager - Redux Toolkit
-
     async function fetchPosts() {
       try {
         setIsLoading(true);
@@ -38,10 +29,8 @@ function PostList() {
     fetchPosts();
   }, []);
 
-  console.log(posts);
-
   return (
-    <div className={isLoading ? "" : "post-grid"}>
+    <div className={isLoading || isError ? "" : "post-grid"}>
       {isLoading ? (
         <Loader />
       ) : (

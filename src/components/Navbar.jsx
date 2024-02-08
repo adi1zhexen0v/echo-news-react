@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -13,9 +14,15 @@ function Navbar() {
         </div>
       </header>
       <nav class="navbar sticky">
-        <div className="navbar-link">Главная</div>
-        <div className="navbar-link">Новости</div>
-        <div className="navbar-link">Контакты</div>
+        <Link to="/" className="navbar-link">
+          Главная
+        </Link>
+        <Link to="/news" className="navbar-link">
+          Новости
+        </Link>
+        <Link to="/contact" className="navbar-link">
+          Контакты
+        </Link>
       </nav>
     </>
   );
