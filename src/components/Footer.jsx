@@ -5,6 +5,11 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  HOME_PAGE_ROUTE,
+  NEWS_PAGE_ROUTE,
+  SETTINGS_PAGE_ROUTE,
+} from "../utils/consts";
 
 function Footer() {
   return (
@@ -13,14 +18,14 @@ function Footer() {
         <div className="footer-part">
           <h2 className="footer-logo">EchoNews</h2>
           <ul className="footer-link-list">
-            <Link to="/" className="footer-link-item">
+            <Link to={HOME_PAGE_ROUTE} className="footer-link-item">
               Главная
             </Link>
-            <Link to="/news" className="footer-link-item">
+            <Link to={NEWS_PAGE_ROUTE} className="footer-link-item">
               Новости
             </Link>
-            <Link to="/contact" className="footer-link-item">
-              Контакты
+            <Link to={SETTINGS_PAGE_ROUTE} className="footer-link-item">
+              Настройки
             </Link>
           </ul>
         </div>

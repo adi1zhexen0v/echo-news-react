@@ -1,10 +1,10 @@
-function HomePage() {
+function SettingsPage() {
   return (
     <div className="container">
-      <h2>Главная</h2>
+      <h2>Настройки</h2>
       <div className="height"></div>
     </div>
   );
 }
 
-export default HomePage;
+export default SettingsPage;

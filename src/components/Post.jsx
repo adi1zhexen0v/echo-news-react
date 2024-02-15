@@ -1,6 +1,7 @@
 import { faAngleRight, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { ARTICLE_PAGE_ROUTE } from "../utils/consts";
 import { formatDate } from "../utils/utils";
 
 function Post({ post }) {
@@ -17,7 +18,13 @@ function Post({ post }) {
             <FontAwesomeIcon icon={faUser} />
             <p className="post-item-name">{post.author}</p>
           </div>
-          <Link to={`/article/${post._id}`} className="post-item post-link">
+          <Link
+            to={
+              ARTICLE_PAGE_ROUTE.substring(0, ARTICLE_PAGE_ROUTE.length - 3) +
+              post._id
+            }
+            className="post-item post-link"
+          >
             <p className="post-item-name">Подробнее</p>
             <FontAwesomeIcon icon={faAngleRight} />
           </Link>
