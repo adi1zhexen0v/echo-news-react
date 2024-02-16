@@ -5,6 +5,11 @@ import Footer from "./components/Footer";
 import AppRouter from "./components/AppRouter";
 import "./assets/css/style.css";
 
+// URL
+// Методы HTTP
+// Заголовки (Headers)*
+// Тело (Body)*
+
 function App() {
   const location = useLocation();
 

@@ -36,7 +36,7 @@ function PostList() {
       ) : (
         posts.map((post) => <Post post={post} key={post._id} />)
       )}
-      {isError && <Error />}
+      {isError ? <Error /> : null}
     </div>
   );
 }
