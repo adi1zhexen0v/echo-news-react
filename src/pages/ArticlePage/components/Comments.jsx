@@ -1,13 +1,7 @@
 import { useState } from "react";
+import axiosInstance from "../../../services/axios";
 import CommentInput from "./CommentInput";
 import CommentItem from "./CommentItem";
-
-// "/news/:id/comments"
-// {
-//   fullName: "string",
-//   text: "string",
-//   rating: "number"
-// }
 
 function Comments({ comments, newsId, setValue, value }) {
   const [fullName, setFullName] = useState("");
@@ -19,23 +13,16 @@ function Comments({ comments, newsId, setValue, value }) {
     e.preventDefault();
     try {
       setIsLoading(true);
-      const res = await fetch(
-        `https://alphaedu.portfolio-adilzhexenov.kz/news/${newsId}/comments`,
+      const { data } = await axiosInstance.post(
+        `/news/${newsId}/comments`,
+        { fullName, text, rating },
         {
-          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            fullName,
-            text,
-            rating,
-          }),
         }
       );
-      const data = await res.json();
       setValue({ ...value, comments: [...value.comments, data] });
-      console.log(data);
       setFullName("");
       setText("");
       setRating(0);

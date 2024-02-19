@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Loader from "./Loader";
 import Error from "./Error";
 import Post from "./Post";
+import axiosInstance from "../services/axios";
 
 function PostList() {
   const [posts, setPosts] = useState([]);
@@ -14,11 +15,8 @@ function PostList() {
     async function fetchPosts() {
       try {
         setIsLoading(true);
-        const res = await fetch(
-          "https://alphaedu.portfolio-adilzhexenov.kz/news"
-        );
-        const data = await res.json();
-        setPosts(data);
+        const response = await axiosInstance.get("/news");
+        setPosts(response.data);
       } catch (e) {
         setIsError(true);
       } finally {

@@ -6,6 +6,7 @@ import { formatDate } from "../../utils/utils";
 import Loader from "../../components/Loader";
 import Error from "../../components/Error";
 import Comments from "./components/Comments";
+import axiosInstance from "../../services/axios";
 
 function ArticlePage() {
   const params = useParams();
@@ -17,11 +18,8 @@ function ArticlePage() {
     async function fetchPost() {
       try {
         setIsLoading(true);
-        const res = await fetch(
-          "https://alphaedu.portfolio-adilzhexenov.kz/news/" + params.id
-        );
-        const data = await res.json();
-        setPost(data);
+        const res = await axiosInstance.get(`/news/${params.id}`);
+        setPost(res.data);
       } catch (e) {
         setIsError(true);
       } finally {
