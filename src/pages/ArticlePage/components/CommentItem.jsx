@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faStar } from "@fortawesome/free-solid-svg-icons";
+import { formatDate } from "../../../utils/utils";
 
 function CommentItem({ fullName, text, rating, createdAt }) {
   return (
@@ -8,7 +9,7 @@ function CommentItem({ fullName, text, rating, createdAt }) {
         <h4 className="comments-item-name">{fullName}</h4>
         <div className="comments-item-date">
           <FontAwesomeIcon icon={faCalendar} />
-          <p>{createdAt}</p>
+          <p>{formatDate(createdAt)}</p>
         </div>
       </div>
       <p className="comments-item-text">{text}</p>

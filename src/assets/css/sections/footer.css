@@ -1,6 +1,6 @@
 .footer {
   padding: 36px 0 24px;
-  background: var(--white);
+  background: var(--primary-color);
   box-shadow: 2px -8px 16px 0px rgba(35, 35, 35, 0.07);
 }
 
@@ -32,7 +32,7 @@
   font-size: 32px;
   line-height: 36px;
   font-weight: 800;
-  color: var(--black);
+  color: var(--title);
   margin-bottom: 16px;
 }
 
@@ -53,7 +53,7 @@
 
 .footer-link-item:hover {
   cursor: pointer;
-  color: var(--black);
+  color: var(--title);
 }
 
 .footer-social-list {

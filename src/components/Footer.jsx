@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTheme } from "../providers/ThemeProvider";
 import {
   faFacebook,
   faTwitter,
@@ -10,10 +11,12 @@ import {
   NEWS_PAGE_ROUTE,
   SETTINGS_PAGE_ROUTE,
 } from "../utils/consts";
+import classnames from "classnames";
 
 function Footer() {
+  const { isDarkTheme } = useTheme();
   return (
-    <footer className="footer">
+    <footer className={classnames("footer", { dark: isDarkTheme })}>
       <div className="footer-top">
         <div className="footer-part">
           <h2 className="footer-logo">EchoNews</h2>

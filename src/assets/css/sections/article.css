@@ -9,7 +9,7 @@
 }
 
 .article-title {
-  color: var(--black);
+  color: var(--title);
   font-size: 28px;
   line-height: 36px;
   font-weight: 700;
@@ -44,7 +44,7 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   font-size: 16px;
-  color: var(--black);
+  color: #232323;
   font-weight: 700;
   background: var(--border);
 }
@@ -53,5 +53,5 @@
   font-size: 18px;
   line-height: 28px;
   font-weight: 500;
-  color: var(--black);
+  color: var(--title);
 }

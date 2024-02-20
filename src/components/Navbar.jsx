@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classnames from "classnames";
+import { useTheme } from "../providers/ThemeProvider";
 import {
   HOME_PAGE_ROUTE,
   NEWS_PAGE_ROUTE,
@@ -8,9 +10,10 @@ import {
 } from "../utils/consts";
 
 function Navbar() {
+  const { isDarkTheme } = useTheme();
   return (
     <>
-      <header className="header">
+      <header className={classnames("header", { dark: isDarkTheme })}>
         <div className="header-container">
           <h1 className="header-logo">EchoNews</h1>
           <div className="header-btn">

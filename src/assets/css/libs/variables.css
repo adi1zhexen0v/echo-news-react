@@ -1,6 +1,8 @@
 :root {
   --white: #fff;
   --black: #232323;
+  --primary-color: var(--white);
+  --title: var(--black);
   --green: #47a76a;
   --green-hover: #378a55;
   --yellow: #FFD700;
@@ -8,4 +10,9 @@
   --border: #dfdfdf;
   --gray: #63637b;
   --light-gray: #b5b5b5;
+  
+  --dark-bg-color: #282828;
+  --dark-primary-color: #181818;
+  --dark-title: #dedede;
 }
+

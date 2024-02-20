@@ -1,16 +1,14 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import classnames from "classnames";
+import { useTheme } from "./providers/ThemeProvider";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AppRouter from "./components/AppRouter";
 import "./assets/css/style.css";
 
-// URL
-// Методы HTTP
-// Заголовки (Headers)*
-// Тело (Body)*
-
 function App() {
+  const { isDarkTheme } = useTheme();
   const location = useLocation();
 
   useEffect(() => {
@@ -20,7 +18,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <AppRouter />
+      <div className={classnames("app", { dark: isDarkTheme })}>
+        <AppRouter />
+      </div>
       <Footer />
     </>
   );

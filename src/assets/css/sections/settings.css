@@ -1,0 +1,47 @@
+.app-title {
+  font-size: 28px;
+  line-height: 36px;
+  color: var(--title);
+  font-weight: 700;
+}
+
+.theme {
+  margin: 40px 0 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+}
+
+.theme-text {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: var(--title);
+}
+
+.toggle {
+  position: relative;
+  width: 72px;
+  height: 24px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+}
+
+.toggle__active > .toggle-round {
+  left: 32px;
+  background: var(--green);
+}
+
+.toggle-round {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid var(--border);
+  border-radius: 100%;
+  background: var(--primary-color);
+  transition: 0.2s ease;
+}
