@@ -26,7 +26,7 @@ function SearchPage() {
     }
 
     fetchPosts();
-  }, []);
+  }, [searchParams]);
 
   return (
     <div className="container">
