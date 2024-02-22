@@ -3,11 +3,13 @@ import HomePage from "../pages/HomePage";
 import NewsPage from "../pages/NewsPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import SettingsPage from "../pages/SettingsPage";
+import SearchPage from "../pages/SearchPage";
 import {
   ARTICLE_PAGE_ROUTE,
   HOME_PAGE_ROUTE,
   NEWS_PAGE_ROUTE,
   SETTINGS_PAGE_ROUTE,
+  SEARCH_PAGE_ROUTE,
 } from "./consts";
 
 export const routes = [
@@ -26,6 +28,10 @@ export const routes = [
   {
     path: ARTICLE_PAGE_ROUTE,
     element: ArticlePage,
+  },
+  {
+    path: SEARCH_PAGE_ROUTE,
+    element: SearchPage,
   },
   {
     path: "*",

@@ -1,3 +1,5 @@
+import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import axiosInstance from "../../../services/axios";
 import CommentInput from "./CommentInput";
@@ -8,6 +10,11 @@ function Comments({ comments, newsId, setValue, value }) {
   const [text, setText] = useState("");
   const [rating, setRating] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+  const [commentsFormIsOpen, setCommentsFormIsOpen] = useState();
+
+  function handleClickToogleForm() {
+    setCommentsFormIsOpen(!commentsFormIsOpen);
+  }
 
   async function sendComment(e) {
     e.preventDefault();
@@ -36,33 +43,43 @@ function Comments({ comments, newsId, setValue, value }) {
   return (
     <>
       <form className="comments-form" onSubmit={(e) => sendComment(e)}>
-        <h3 className="comments-form-title">Добавить комментарий</h3>
-        <CommentInput
-          title="Полное имя"
-          placeholder="Введите ваше имя"
-          value={fullName}
-          setValue={setFullName}
-        />
-        <CommentInput
-          isTextarea={true}
-          title="Ваш комментарий"
-          placeholder="Введите ваш комментарий"
-          value={text}
-          setValue={setText}
-        />
-        <CommentInput
-          type="number"
-          title="Рейтинг"
-          placeholder="Введите вашу оценку статьи"
-          value={rating}
-          setValue={setRating}
-        />
-        <div className="comments-form-bottom">
-          <button className="comments-form-button" type="submit">
-            Оставить комментарий
-          </button>
-          {isLoading && "Загрузка..."}
+        <div className="comments-form-hide">
+          <h3 className="comments-form-title">Добавить комментарий</h3>
+          <FontAwesomeIcon
+            onClick={handleClickToogleForm}
+            icon={commentsFormIsOpen ? faEyeSlash : faEye}
+          />
         </div>
+        {commentsFormIsOpen && (
+          <>
+            <CommentInput
+              title="Полное имя"
+              placeholder="Введите ваше имя"
+              value={fullName}
+              setValue={setFullName}
+            />
+            <CommentInput
+              isTextarea={true}
+              title="Ваш комментарий"
+              placeholder="Введите ваш комментарий"
+              value={text}
+              setValue={setText}
+            />
+            <CommentInput
+              type="number"
+              title="Рейтинг"
+              placeholder="Введите вашу оценку статьи"
+              value={rating}
+              setValue={setRating}
+            />
+            <div className="comments-form-bottom">
+              <button className="comments-form-button" type="submit">
+                Оставить комментарий
+              </button>
+              {isLoading && "Загрузка..."}
+            </div>
+          </>
+        )}
       </form>
 
       <div className="comments">

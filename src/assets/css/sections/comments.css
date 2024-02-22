@@ -122,3 +122,15 @@
   align-items: center;
   gap: 16px;
 }
+
+.comments-form-hide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments-form-hide svg {
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--green);
+}

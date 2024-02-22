@@ -13,6 +13,7 @@ function ArticlePage() {
   const [post, setPost] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  console.log(post);
 
   useEffect(() => {
     async function fetchPost() {

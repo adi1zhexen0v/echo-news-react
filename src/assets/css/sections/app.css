@@ -12,6 +12,8 @@ body {
   --primary-color: var(--dark-bg-color);
   --bg-color: var(--dark-bg-color);
   --title: var(--dark-title);
+  --gray: var(--light-gray);
+  --border: var(--dark-border);
 }
 
 .container {
@@ -20,11 +22,18 @@ body {
   margin: 0 auto;
 }
 
+.app-title {
+  color: var(--title);
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
 .not-found {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .not-found-img {
