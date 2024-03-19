@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Echo News: Web Development Course Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project, Echo News, is a news blog developed as part of the web development course conducted by [LLC "Alpha.Tech.Edu"](https://alphaedu.tech/). It serves as a practical exercise for students learning web development concepts and techniques. It is built using the following technologies:
 
-## Available Scripts
+![Static Badge](https://img.shields.io/badge/react-blue?style=flat-square&logo=react&logoColor=%2302d3f6&labelColor=%2323272f&color=%2302d3f6&link=https%3A%2F%2Freact.dev%2F)
+![Static Badge](https://img.shields.io/badge/javascript-blue?style=flat-square&logo=javascript&logoColor=%23f7df1e&labelColor=%2323272f&color=%23f7df1e&link=https%3A%2F%2Fjs-documentation.netlify.app%2F)
+![Static Badge](https://img.shields.io/badge/react_router_dom-blue?style=flat-square&logo=reactrouter&logoColor=%23f44250&labelColor=%2323272f&color=%23f44250&link=https%3A%2F%2Freactrouter.com%2Fen%2Fmain%2Fstart%2Ftutorial)
+![Static Badge](https://img.shields.io/badge/axios-blue?style=flat-square&logo=axios&logoColor=%235a29e4&labelColor=%2323272f&color=%235a29e4&link=https%3A%2F%2Faxios-http.com%2F)
 
-In the project directory, you can run:
+## Technologies and Tools
 
-### `npm start`
+- Utilizes React Router Dom v6 for efficient routing.
+- Implements theme changes using React Context.
+- Utilizes Axios for making requests to fetch posts and adding comments.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Folder Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **assets:** Contains static styles and static images.
+- **components:** Houses reusable components.
+- **pages:** Holds all pages for routing.
+- **utils:** Includes files such as utilities, constants, etc.
+- **providers:** Includes providers where React Context is used.
+- **services:** Contains services like Axios for server requests.
